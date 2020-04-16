@@ -1,36 +1,32 @@
 <template>
   <div id="app">
+    <van-notice-bar text="在线查询天气v1.0Bate版本上线啦，欢迎大家免费使用，提出你们的宝贵意见！" left-icon="volume-o" />
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <van-tabbar v-model="active" fixed route>
+        <van-tabbar-item to="/" name="home" icon="home-o">首页</van-tabbar-item>
+        <van-tabbar-item to="/about" name="mine" icon="setting-o">我的</van-tabbar-item>
+      </van-tabbar>
     </div>
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-body {
-  margin: 0;
-  padding: 0;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
-#nav {
-  padding: 30px;
+@Component
+export default class App extends Vue {
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  @Prop() private msg!: string;
 
-    &.router-link-exact-active {
-      color: #42b983;
+  data() {
+    return {
+      active: 'home'
     }
   }
 }
+</script>
+
+<style lang="scss">
+
 </style>

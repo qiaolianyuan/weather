@@ -4,7 +4,7 @@
     <div id="nav">
       <van-tabbar v-model="active" fixed route>
         <van-tabbar-item to="/" name="home" icon="home-o">首页</van-tabbar-item>
-        <van-tabbar-item to="/about" name="mine" icon="setting-o">我的</van-tabbar-item>
+        <van-tabbar-item to="/mine" name="mine" icon="setting-o">我的</van-tabbar-item>
       </van-tabbar>
     </div>
     <router-view/>

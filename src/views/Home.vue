@@ -35,6 +35,7 @@ export default class Home extends Vue {
       img {
         width: 100%;
         height: 4rem;
+        display: block;
     }
   }
 </style>

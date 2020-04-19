@@ -26,7 +26,7 @@ export default class Search extends Vue {
   }
 
   async getInfo (lon: string, lat: string) {
-    const fdata: any = qs.stringify({
+    const fdata: any = qs.stringify({ // qs 序列化 提交formdata数据 需要设置请求头content-type
       lon,
       lat,
       dtype: 'json'

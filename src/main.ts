@@ -5,7 +5,7 @@ import router from './router'
 import store from './store'
 import { HttpService } from './utils/http'
 import './utils/rem';
-import { Button, Tabbar, TabbarItem, Field, NoticeBar } from 'vant';
+import { Button, Tabbar, TabbarItem, Field, NoticeBar, Form } from 'vant';
 import 'vant/lib/index.css';
 import './scss/reset.scss';
 
@@ -18,6 +18,7 @@ Vue.use(Tabbar)
 Vue.use(TabbarItem)
 Vue.use(Field)
 Vue.use(NoticeBar)
+Vue.use(Form)
 
 new Vue({
   router,
